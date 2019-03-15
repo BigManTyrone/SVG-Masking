@@ -1,40 +1,37 @@
-body {
+body { 
+    margin: 0; 
     height: 100vh;
-    margin:0;
+}
+  
+canvas { 
+    display: block;
 }
 
-svg{
-    font-family: 'Montserrat';
-    font-size: 8em;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 1s font-size;
-
+h1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-}
-video{
-    width:100%;
-    height: 100%;
-}
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Montserrat';
+    font-size: 7em;
+    text-transform: uppercase;
+    width: auto;
+    line-height: .8em;
+    border: 2px solid black;
+    padding: .2em;
+    transition: 1s font-size;
+    transition: 1s left;
+  }
 
-svg rect{
-    fill: white;
-    mask: url(#mask);
-}
-svg > rect{
-    background-color: gray;
-}
 
-@media screen and (min-width: 560px) and (max-width: 1200px) {
-    svg{
-        font-size: 4em;
+
+@media screen and (min-width: 560px) and (max-width: 1280px) {
+    h1{
+        font-size: 5em;
     }
 }
 @media screen and (max-width: 559px) {
-    svg{
+    h1{
         font-size: 2.1em;
     }
   }
